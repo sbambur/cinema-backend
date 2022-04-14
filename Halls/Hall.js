@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 const { Schema } = mongoose;
 
-
-
 const Seat = new Schema({
   seatNumber: { type: Number, required: true },
   price: { type: Number, required: true },
@@ -24,7 +22,8 @@ const Hall = new Schema({
   active: { type: Boolean, required: true },
   date: Date,
   movie: {
-    title: { type: String, required: true },
+    id: String,
+    title: String,
     overview: String,
     release_date: String,
     poster_path: String,
