@@ -12,9 +12,8 @@ const Seat = new Schema({
   pos: {
     row: { type: Number, required: true },
     seat: { type: Number, required: true },
-  }
-})
-
+  },
+});
 
 const Hall = new Schema({
   title: { type: String, required: true },
@@ -22,14 +21,17 @@ const Hall = new Schema({
   active: { type: Boolean, required: true },
   date: Date,
   movie: {
-    id: String,
+    id: Number,
     title: String,
+    runtime: Number,
+    vote_average: Number,
     overview: String,
+    genres: Array,
     release_date: String,
     poster_path: String,
     backdrop_path: String,
   },
   seats: [Seat],
-})
+});
 
-export default mongoose.model('Hall', Hall);
+export default mongoose.model("Hall", Hall);
