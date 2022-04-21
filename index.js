@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import router from "./router.js";
+import router from "./src/routes/router.js";
 import cors from "cors";
 
 const PORT = 5000;
